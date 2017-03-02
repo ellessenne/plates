@@ -39,8 +39,8 @@ ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
 
 A non-exhaustive list of future developments includes:
 
-1- `ggplot2` custom `scale_color_*` and `scale_fill_*` functions;
+- [ ] `ggplot2` custom `scale_color_*` and `scale_fill_*` functions;
 
-2- a whole `ggplot2` theme;
+- [ ] a whole `ggplot2` theme;
 
-3- ...
+- [ ] ...
