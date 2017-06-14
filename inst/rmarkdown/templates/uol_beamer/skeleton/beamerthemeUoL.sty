@@ -1,0 +1,173 @@
+% the various libraries we will be using
+\usepackage[none]{hyphenat}
+\usepackage{fontspec}
+\usepackage{tikz}
+
+%%%%% colour options
+% process primary color
+\DeclareOptionBeamer{primary}{\def\beamer@UoL@primary{#1}}
+\ExecuteOptionsBeamer{primary=blue}
+\ProcessOptionsBeamer
+
+\def\beamer@UoL@primaryblue{blue}%
+\def\beamer@UoL@primarygrey{grey}%
+\def\beamer@UoL@primarybrown{brown}%
+
+\ifx\beamer@UoL@primary\beamer@UoL@primarybrown%
+    \definecolor{primary}{HTML}{6C4D56} % brown
+\else%
+  \ifx\beamer@UoL@primary\beamer@UoL@primarygrey%
+    \definecolor{primary}{HTML}{667177} % grey
+  \else%
+    \definecolor{primary}{HTML}{004366} % blue
+  \fi%
+\fi%
+
+% process accent color
+\DeclareOptionBeamer{accent}{\def\beamer@UoL@accent{#1}}
+\ExecuteOptionsBeamer{accent=red}
+\ProcessOptionsBeamer
+
+\def\beamer@UoL@accentred{red}%
+\def\beamer@UoL@accentgreen{green}%
+\def\beamer@UoL@accentbrightgreen{brightgreen}%
+\def\beamer@UoL@accentorange{orange}%
+\def\beamer@UoL@accentlightblue{lightblue}%
+\def\beamer@UoL@accentpurple{purple}%
+\def\beamer@UoL@accentyellow{yellow}%
+\def\beamer@UoL@accentpink{pink}%
+
+\ifx\beamer@UoL@accent\beamer@UoL@accentpink%
+  \definecolor{accent}{HTML}{D60B7B} % pink
+\else%
+  \ifx\beamer@UoL@accent\beamer@UoL@accentgreen%
+  \definecolor{accent}{HTML}{00A783} % green
+  \else%
+    \ifx\beamer@UoL@accent\beamer@UoL@accentbrightgreen%
+    \definecolor{accent}{HTML}{B3C50E} % brightgreen
+    \else%
+      \ifx\beamer@UoL@accent\beamer@UoL@accentorange%
+      \definecolor{accent}{HTML}{E27F20} % orange
+      \else%
+        \ifx\beamer@UoL@accent\beamer@UoL@accentlightblue%
+        \definecolor{accent}{HTML}{009BC8} % lightblue
+        \else%
+          \ifx\beamer@UoL@accent\beamer@UoL@accentpurple%
+          \definecolor{accent}{HTML}{832672} % purple
+          \else%
+            \ifx\beamer@UoL@accent\beamer@UoL@accentyellow%
+            \definecolor{accent}{HTML}{DFCB00} % yellow
+            \else%
+            \definecolor{accent}{HTML}{C71F4B} % red
+            \fi%
+          \fi%
+        \fi%
+      \fi%
+    \fi%
+  \fi%
+\fi%
+
+% process background color
+
+% define uol_grey
+\definecolor{uol_grey}{HTML}{667177}
+
+% assign colours
+\setbeamercolor{itemize item}{fg = accent}
+\setbeamercolor{enumerate item}{fg = accent}
+\setbeamercolor{title}{fg = white}
+\setbeamercolor{author}{fg = white}
+\setbeamercolor{date}{fg = white}
+\setbeamercolor{institute}{fg = white}
+\setbeamercolor{frametitle}{fg = primary}
+\setbeamercolor{section in toc}{fg = primary}
+\setbeamercolor{author in head/foot}{fg = uol_grey, bg = white}
+\setbeamercolor{title in head/foot}{fg = uol_grey, bg = white}
+\setbeamercolor{date in head/foot}{fg = uol_grey, bg = white}
+\setbeamercolor{section in head/foot}{fg = black, bg = white}
+\setbeamercolor{subsection in head/foot}{fg = uol_grey, bg = white}
+\setbeamercolor{alerted text}{fg = accent}
+\setbeamercolor{footline}{fg = uol_grey}
+\setbeamercolor{footlinecolor}{fg = uol_grey, bg = white}
+\setbeamercolor{footlinecolor}{fg = uol_grey, bg = white}
+
+\mode
+<all>
+
+%%%%% fonts options
+%%%%% current fonts downloaded from fonts.google.com
+% set directory with all the fonts:
+\newcommand*{\fontdir}[1][Fonts/]{\def\@fontdir{#1}}
+\fontdir
+
+% main font (serif) for titles:
+\setromanfont{PlayfairDisplay}[
+  Path = \@fontdir,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]
+
+% mono font for code:
+\setmonofont{Inconsolata}[
+  Path=\@fontdir,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+]
+
+% sans serif font for everything else
+\setsansfont{OpenSans}[
+  Path=\@fontdir,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]
+
+\setbeamerfont{title}{family=\rmfamily, size=\Large}
+\setbeamerfont{subtitle}{family=\rmfamily}
+\setbeamerfont{author}{family=\rmfamily, size=\small}
+\setbeamerfont{institute}{family=\rmfamily, size=\tiny}
+\setbeamerfont{date}{family=\rmfamily, size=\footnotesize}
+\setbeamerfont{frametitle}{family=\rmfamily}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{footnote mark}{size=\tiny}
+
+% background of title page
+\setbeamertemplate{background canvas}{%
+    \ifnum\c@framenumber=0%
+        % On title page
+        \color{primary}\rule{\paperwidth}{\paperheight}
+    \fi%
+}
+
+\addtobeamertemplate{title page}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor = north west, yshift = -1ex, xshift = 1ex] at (current page.north west) {\includegraphics[width = 40mm]{uol_inverse_logo.pdf}};
+\end{tikzpicture}}
+
+\makeatother
+
+% disable navigation
+\setbeamertemplate{navigation symbols}{}
+
+% customize footline
+\setbeamertemplate{footline}
+{
+  \hbox{%
+  \begin{beamercolorbox}[wd = 0.50\paperwidth, ht = .05\paperheight, dp=1ex, left]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace*{2em}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd = 0.50\paperwidth, ht = .05\paperheight, dp = 1ex, right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\hspace*{2em}
+    \insertframenumber{} of \inserttotalframenumber\hspace*{2em}
+  \end{beamercolorbox}}%
+}
+
+
+% remove line before footnote:
+\renewcommand*\footnoterule{}
+
+% set beamer covered text:
+\setbeamercovered{transparent}
