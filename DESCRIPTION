@@ -1,16 +1,15 @@
 Package: uolvid
 Type: Package
-Title: A University of Leicester Palette Generator
-Version: 0.0.1
+Title: University of Leicester Visual Identity Tools
+Version: 0.0.2
 Author: Alessandro Gasparini [aut, cre]
 Maintainer: Alessandro Gasparini <ag475@le.ac.uk>
 Description: A package to generate colour palettes following the University of Leicester visual identity guidelines.
     Use four spaces when indenting paragraphs within the Description.
-License: MIT + file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://github/com/ellessenne/uolvid
 BugReports: https://github/com/ellessenne/uolvid/issues
-Depends: R(>= 3.0)
-Suggests: ggplot2
+Depends: R(>= 3.0), ggplot2, rmarkdown
 RoxygenNote: 6.0.1
