@@ -29,7 +29,7 @@ get_uol_palette(n = 5)
 get_uol_palette(n = 5, intensity = "medium")
 get_uol_palette(n = 5, method = "brightness")
 
-require(ggplot2)
+library(ggplot2)
 pl = get_uol_palette(n = 10)
 ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
 geom_point() +

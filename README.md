@@ -1,6 +1,14 @@
 # uolvid
 
-`uolvid` is an R package for generating colour palettes following the University of Leicester [visual identity guidelines](http://www2.le.ac.uk/offices/cap/marcomms/creative/identity).
+`uolvid` is an R package with tools following the University of Leicester [visual identity guidelines](http://www2.le.ac.uk/offices/cap/marcomms/creative/identity).
+
+Included tools are:
+
+- a minimal beamer template, with customisable colours;
+
+- colour palette generators;
+
+- ...
 
 Included are:
 
