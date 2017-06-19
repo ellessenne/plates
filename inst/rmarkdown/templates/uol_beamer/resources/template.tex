@@ -2,6 +2,10 @@
 \usetheme[$if(primary)$primary=$primary$,$endif$$if(accent)$accent=$accent$$endif$]{UoL}
 \def\tightlist{}
 
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 \newif\ifbibliography
 $if(natbib)$
 \usepackage{natbib}
