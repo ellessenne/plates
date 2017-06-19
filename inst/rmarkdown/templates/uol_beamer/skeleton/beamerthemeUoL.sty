@@ -74,7 +74,11 @@
 
 % assign colours
 \setbeamercolor{itemize item}{fg = accent}
+\setbeamercolor{itemize subitem}{fg = accent}
+\setbeamercolor{itemize subsubitem}{fg = accent}
 \setbeamercolor{enumerate item}{fg = accent}
+\setbeamercolor{enumerate subitem}{fg = accent}
+\setbeamercolor{enumerate subsubitem}{fg = accent}
 \setbeamercolor{title}{fg = white}
 \setbeamercolor{author}{fg = white}
 \setbeamercolor{date}{fg = white}
@@ -171,3 +175,7 @@
 
 % set beamer covered text:
 \setbeamercovered{transparent}
+
+% itemize second level points style
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[square]
