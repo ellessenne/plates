@@ -1,6 +1,6 @@
 % the various libraries we will be using
 \usepackage[none]{hyphenat}
-\usepackage{fontspec}
+\usepackage[no-math]{fontspec}
 \usepackage{tikz}
 
 %%%%% colour options
@@ -94,7 +94,6 @@
 \setbeamercolor{footline}{fg = uol_grey}
 \setbeamercolor{footlinecolor}{fg = uol_grey, bg = white}
 \setbeamercolor{footlinecolor}{fg = uol_grey, bg = white}
-\setbeamercolor{caption name}{fg = accent}
 
 \mode
 <all>
@@ -138,6 +137,9 @@
 \setbeamerfont{frametitle}{family=\rmfamily}
 \setbeamerfont{footnote}{size=\tiny}
 \setbeamerfont{footnote mark}{size=\tiny}
+
+% math font
+\usefonttheme{professionalfonts}
 
 % background of title page
 \setbeamertemplate{background canvas}{%

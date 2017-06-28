@@ -8,7 +8,7 @@ wrap_linewidth()
 }
 \description{
 \code{wrap_linewidth()} wrap the output from an R code chunk to a given width, specified by the global option \code{width}.
-Usage is pretty straighforward: set the global \code{width} option to a given value, set the knitr chunk option \code{linewidth} to \code{getOption("width")}, and call \code{wrap_linewidth()}.
+Usage is pretty straighforward: set the global \code{width} option to a given value, set the knitr chunk option \code{linewidth} to \code{getOption("width")}, and call \code{wrap_linewidth()}. See \url{https://github.com/yihui/knitr-examples/blob/master/077-wrap-output.Rmd}.
 }
 \examples{
 \dontrun{
