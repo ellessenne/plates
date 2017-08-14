@@ -1,0 +1,180 @@
+---
+title: "Title"
+author: "Author"
+date: "Date"
+output: uolvid::uol_remarkjs
+---
+count: false
+
+```{r include = FALSE}
+knitr::opts_chunk$set(tidy = FALSE, tidy.opts = list(width.cutoff = 50))
+```
+
+# Outline
+
+We will talk about:
+
+1. Introduction
+
+--
+
+2. How we did it
+
+--
+
+3. What we actually did
+
+--
+
+4. Why that is so cool
+
+--
+
+5. Press `P` on your keyboard!
+
+???
+
+Also, why not having some notes here?
+
+---
+# Another slide
+
+This slide has two columns<sup>a</sup>.
+
+.pull-left[
+1. One
+
+2. Two
+
+3. Three
+]
+
+.pull-right[
+* Rock
+
+* Paper
+
+* Scissors
+]
+
+.footnote[
+<sup>a</sup> ...and a footnote [#yolo](https://media.giphy.com/media/yjDJKHcfYjnZm/giphy.gif)
+]
+
+---
+# Slide with text
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique ante non elementum condimentum. Pellentesque egestas dui a nisl placerat, vel sodales lectus fermentum. Cras posuere ullamcorper quam, quis eleifend odio vulputate nec. Nunc nec cursus magna, ac congue dui. Sed mattis ipsum eget odio sollicitudin dapibus. Fusce placerat ante tristique fringilla rhoncus. Donec porta, augue et lobortis pharetra, ligula sapien mollis arcu, at ultricies metus dolor quis quam. Integer elementum est tortor, ac tempor sapien sodales ac.
+
+Curabitur non fermentum sem, sed convallis quam. Fusce ut orci dictum, euismod odio vitae, fringilla nisi. Mauris laoreet finibus arcu, sit amet egestas dui feugiat et. Duis in justo dolor. Fusce sit amet placerat erat. Morbi ac facilisis lacus. Donec a leo mollis, auctor tellus nec, elementum purus. Aliquam faucibus nibh ac risus hendrerit egestas. Donec pulvinar porttitor nunc nec vehicula. Pellentesque hendrerit, magna ut placerat vulputate, tortor orci tincidunt felis, eu scelerisque tellus enim in urna. Cras at ante quis mi accumsan efficitur ut vitae massa. Aliquam tempus turpis a erat gravida malesuada. Suspendisse mollis arcu eu cursus cursus. Aenean pulvinar tellus eget lorem sodales, et volutpat nulla accumsan.
+
+---
+# A slide with sidebar*
+
+.left-column[
+  ### Chapter 1
+]
+.right-column[
+1.  One
+
+2.  Two
+
+3.  Three
+]
+
+.footnote[<sup>*</sup> ...sort of.]
+
+---
+# A slide with sidebar
+
+.left-column[
+  ### Chapter 1
+  ### Chapter 2
+]
+.right-column[
+1.  One and two
+
+2.  Two and three
+
+3.  Three and four
+]
+
+---
+# A slide with sidebar
+
+.left-column[
+  ### Chapter 1
+  ### Chapter 2
+  ### Chapter 3
+]
+.right-column[
+1.  One and two and three
+
+2.  Two and three and four
+
+3.  Three and four and five
+]
+
+---
+# Also
+
+Also, this is .red[red] and this is .large[large].
+
+---
+# R code
+
+```{r}
+x = rnorm(10)
+y = rnorm(10)
+```
+
+---
+# A plot
+
+To plot something: 
+
+.pull-left[
+```{r, eval = F}
+plot(x, y)
+```
+]
+
+.pull-right[
+```{r, fig.width = 5, fig.height = 5, echo = F, dev = 'svg'}
+plot(x, y)
+```
+]
+
+---
+# More R plots
+
+```{r cars, out.height = '15%', fig.height = 4, fig.width = 6, dev = 'svg'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+fit = lm(dist ~ 1 + speed, data = cars)
+abline(fit, lwd = 2)
+```
+
+---
+class: .image-slide, center, middle
+
+```{r, echo = F}
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 2)
+```
+
+---
+class: center, middle, inverse
+count: false
+
+# End of presentation!
+
+---
+class: back-slide
+count: false
+
+# Back slides
+
+Slides here could be used to list references, include additional examples, ...
+
+Do not forget to assign slides to the `back-slide` class, and assign `count: false`!
