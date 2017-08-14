@@ -25,9 +25,9 @@ wrap_linewidth = function() {
     hook_output(x, options)
   })}
 
+# Copied from rticles package:
 find_file <- function(template, file) {
-  template <- system.file("rmarkdown", "templates", template, file,
-                          package = "uolvid")
+  template <- system.file("rmarkdown", "templates", template, file, package = "uolvid")
   if (template == "") {
     stop("Couldn't find template file ", template, "/", file, call. = FALSE)
   }

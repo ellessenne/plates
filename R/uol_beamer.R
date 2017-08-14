@@ -11,7 +11,7 @@
 #'
 #' \dontrun{
 #' library(rmarkdown)
-#' draft("my_presentation.Rmd", template = "uol_presentation", package = "uolvid")
+#' draft("my_presentation.Rmd", template = "uol_beamer", package = "uolvid")
 #' }
 #'
 #' @export
