@@ -4,21 +4,23 @@
 \alias{uol_remarkjs}
 \title{A minimal Remark.js template following University of leicester visual identity guidelines}
 \usage{
-uol_remarkjs(..., css = "default")
+uol_remarkjs(..., css = "uol_remarkjs")
 }
 \arguments{
-\item{...}{Additional arguments to \code{xaringan::moon_reader}}
+\item{...}{Additional arguments passed to \code{\link[xaringan]{moon_reader}}}
 
 \item{css}{A vector of CSS file paths. A default CSS file is provided in this
 package, which was borrowed from \url{https://remarkjs.com}. If the
 character vector \code{css} contains the value \code{'default'}, the
 default CSS will be used (e.g. \code{css = c('default', 'extra.css')}).}
 }
-\value{
-R Markdown output format to pass to \code{\link[rmarkdown:render]{render}}
-}
 \description{
-Write something here...
+This format is a wrapper around \code{\link[xaringan]{moon_reader}}. It includes a custom .css file following visual identity guidelines issued by the University of Leicester.
+}
+\note{
+Do not trust the preview of the presentation from the RStudio viewer or window. Instead, open the presentation with a web browser and refresh to see changes.
+
+Include \code{css: ["default", "uol_remarkjs"]} in the YAML header to include the standard \code{xaringan} CSS file. For instance, that improves printing to PDF using Google Chrome. More details on printing to PDF in \href{https://github.com/yihui/xaringan/issues/65}{#65} and \href{https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF}{here}.
 }
 \examples{
 

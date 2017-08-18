@@ -82,7 +82,7 @@ Curabitur non fermentum sem, sed convallis quam. Fusce ut orci dictum, euismod o
 3.  Three
 ]
 
-.footnote[<sup>*</sup> ...sort of.]
+.footnote[<sup>*</sup> ...sort of. I don't like and I would discourage you from using it.]
 
 ---
 # A slide with sidebar
@@ -163,6 +163,26 @@ plot(cars, pch = 19, col = 'darkgray', las = 1)
 abline(fit, lwd = 2)
 ```
 
+---
+# Printing
+
+If you want to export the slides as a PDF it is of course possible.
+First, though, you need to import the default css used by `xaringan` in the YAML header:
+
+```{yaml}
+output: 
+  uolvid::uol_remarkjs:
+    css: ["default", "uol_remarkjs"]
+```
+
+This uses both the default `xaringan` css and the custom `uol_remarkjs` css.
+Then, just knit<sup>!!!</sup> the document and print from the browser (CTRL+P or CMD+P in Chrome).
+
+Alternatively, check out DeckTape [here](https://github.com/astefanutti/decktape) and [here](https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF).
+
+.footnote[
+<sup>!!!</sup> Do not trust RStudio viewer here!
+]
 ---
 class: center, middle, inverse
 count: false
