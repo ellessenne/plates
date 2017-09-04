@@ -7,7 +7,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'Lora', serif;
-  font-weight: 400;*/
+  font-weight: 400;
   margin-bottom: 0;
 }
 
@@ -27,6 +27,14 @@ h1, h2, h3 {
 
 .remark-slide-content h3 {
   font-size: var(--size-large);
+}
+
+.remark-slide-content p {
+  font-size: var(--size-normalsize);
+}
+
+.remark-slide-content ul, ol {
+  font-size: var(--size-normalsize);
 }
 
 .title-slide h1 {
@@ -228,8 +236,6 @@ code {
 /* Slide counter */
 .remark-slide-number {
   font-size: var(--size-small);
-  margin-bottom: -10px;
-  margin-right: 10px;
   color: var(--colour-uol-grey);
 }
 
@@ -318,17 +324,20 @@ table tr th :last-child, table tr td :last-child {
   --colour-uol-purple: #832672;
   --colour-uol-yellow: #DFCB00;
   --colour-uol-pink: #D60B7B;
+}
 
-  --size-tiny: 0.694228161em;
-  --size-scriptsize: 0.833375195em;
-  --size-footnotesize: 0.833375195em;
-  --size-small: 0.833375195em;
-  --size-normalsize: 1em;
-  --size-large: 1.200080374em;
-  --size-Large: 1.43969458em;
-  --size-LARGE: 1.728035364em;
-  --size-huge: 2.073642437em;
-  --size-Huge: 2.073642437em;
+/* Custom font sizes mimicking beamer: 110% of default beamer size */
+:root{
+  --size-tiny: 0.763650977em;
+  --size-scriptsize: 0.916712714em;
+  --size-footnotesize: 0.916712714em;
+  --size-small: 0.916712714em;
+  --size-normalsize: 1.10em;
+  --size-large: 1.320088411em;
+  --size-Large: 1.583664038em;
+  --size-LARGE: 1.900838901em;
+  --size-huge: 2.281006681em;
+  --size-Huge: 2.281006681em;
 }
 
 /* Logos: */
