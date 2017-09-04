@@ -38,3 +38,25 @@ find_file <- function(template, file) {
 find_resource <- function(template, file) {
   find_file(template, file.path("resources", file))
 }
+
+#' Copy default remark.js stylesheet to a given directory
+#'
+#' With \code{get_remarkjs_css()} you can copy the default stylesheet used for the UoL remark.js template to a given directory. This is useful if you want to tune the stylesheet yourself or implement new classes.
+#' @param to where to copy the default stylesheet
+#'
+#' @return This function returns a logical value indicating whether the operation succeeded or not. Using a missing value for a file or path name will always be regarded as a failure: see \code{\link{file.copy}} for more details.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' # Copy the default stylesheet to the current working directory
+#' get_remarkjs_css()
+#'
+#' # Copy the default stylesheet to the "temp" directory
+#' get_remarkjs_css(to = "temp")
+#' }
+
+get_remarkjs_css <- function(to = getwd()) {
+  file.copy(from = find_resource("uol_remarkjs", "uol_remarkjs.css"),
+            to = to)
+}
