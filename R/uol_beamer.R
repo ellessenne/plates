@@ -3,9 +3,9 @@
 #' Write something here...
 #'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @param ... Additional arguments to \code{rmarkdown::beamer_presentation}
+#' @param ... Additional arguments to [rmarkdown::beamer_presentation()]
 #'
-#' @return R Markdown output format to pass to \code{\link[rmarkdown:render]{render}}
+#' @return R Markdown output format to pass to [rmarkdown::render()]
 #'
 #' @examples
 #'

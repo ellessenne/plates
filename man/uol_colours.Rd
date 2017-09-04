@@ -12,7 +12,7 @@ uol_colours
 A list of colors, in HEX format.
 }
 \description{
-Use the functions \code{\link{get_uol_palette}}, \code{\link{get_uol_palette_mono}}, \code{\link{get_uol_palette_manual}} to obtain the desired color palette.
+Use the functions \code{\link[=get_uol_palette]{get_uol_palette()}}, \code{\link[=get_uol_palette_mono]{get_uol_palette_mono()}}, \code{\link[=get_uol_palette_manual]{get_uol_palette_manual()}} to obtain the desired color palette.
 Plase note that \code{blue}, \code{grey}, and \code{brown} are all primary colours, while the remaining are secondary ones.
 }
 \keyword{datasets}

@@ -16,7 +16,7 @@ get_uol_palette_mono(colour = c("blue", "grey", "brown", "pink", "yellow",
 A vector of colours, in HEX format.
 }
 \description{
-\code{get_uol_palette_mono} return a monochromatic palette of colours following the University of Leicester visual identity guidelines. It is possible to select the colour and the number of values on the same monochromatic scale.
+\code{\link[=get_uol_palette_mono]{get_uol_palette_mono()}} return a monochromatic palette of colours following the University of Leicester visual identity guidelines. It is possible to select the colour and the number of values on the same monochromatic scale.
 }
 \details{
 It is recommended to use not more than \code{n = 3} colours, as in that case additional colours are picked by interpolation.
@@ -27,8 +27,6 @@ get_uol_palette_mono(colour = "blue")
 get_uol_palette_mono(colour = "red", n = 2)
 }
 \seealso{
-\code{\link{get_uol_palette}} for multicolour palettes, \code{\link{get_uol_palette_manual}} for user-defined palettes.
-
 Other get palettes: \code{\link{get_uol_palette_manual}},
   \code{\link{get_uol_palette}}
 }

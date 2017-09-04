@@ -15,15 +15,13 @@ get_uol_palette_manual(colours, intensity = c("full", "medium", "light"))
 A vector of colours, in HEX format.
 }
 \description{
-\code{get_uol_palette_manual} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
+\code{\link[=get_uol_palette_manual]{get_uol_palette_manual()}} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
 }
 \examples{
 get_uol_palette_manual(c("red", "blue", "yellow"))
 get_uol_palette_manual(c("red", "blue", "yellow"), intensity = "medium")
 }
 \seealso{
-\code{\link{get_uol_palette_mono}} for monochromatic palettes, \code{\link{get_uol_palette}} for multicolour palettess.
-
 Other get palettes: \code{\link{get_uol_palette_mono}},
   \code{\link{get_uol_palette}}
 }

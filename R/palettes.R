@@ -1,13 +1,12 @@
 #' @title Monochromatic colour palette
 #'
-#' @description \code{get_uol_palette_mono} return a monochromatic palette of colours following the University of Leicester visual identity guidelines. It is possible to select the colour and the number of values on the same monochromatic scale.
+#' @description [get_uol_palette_mono()] return a monochromatic palette of colours following the University of Leicester visual identity guidelines. It is possible to select the colour and the number of values on the same monochromatic scale.
 #'
 #' @family get palettes
 #' @param n Number of colours for the desired palette. Defaults to 3.
-#' @param colour A vector of colour names. See \code{\link{uol_colours}} for a list of possible colours.
+#' @param colour A vector of colour names. See [`uol_colours`] for a list of possible colours.
 #' @return A vector of colours, in HEX format.
-#' @details It is recommended to use not more than \code{n = 3} colours, as in that case additional colours are picked by interpolation.
-#' @seealso \code{\link{get_uol_palette}} for multicolour palettes, \code{\link{get_uol_palette_manual}} for user-defined palettes.
+#' @details It is recommended to use not more than `n = 3` colours, as in that case additional colours are picked by interpolation.
 #' @import grDevices
 #' @export
 #'
@@ -37,15 +36,14 @@ get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "ye
 
 #' @title Colours palette generator
 #'
-#' @description \code{get_uol_palette} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
+#' @description [get_uol_palette()] return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
 #'
 #' @family get palettes
 #' @param n Number of colours for the desired palette. Defaults to 3.
-#' @param intensity Intensity of the desired palette. Possible values are \code{full}, \code{medium}, \code{light}. Defaults to \code{full}.
-#' @param method Method used to pick colours. Possible values are \code{hue}, \code{saturation},\code{brightness}. Defaults to \code{hue}.
+#' @param intensity Intensity of the desired palette. Possible values are `full`, `medium`, `light`. Defaults to `full`.
+#' @param method Method used to pick colours. Possible values are `hue`, `saturation`, `brightness`. Defaults to `hue`.
 #' @return A vector of colours, in HEX format.
-#' @details It is recommended to use not more than \code{n = 11} colours, as in that case additional colours are picked by interpolation.
-#' @seealso \code{\link{get_uol_palette_mono}} for monochromatic palettes, \code{\link{get_uol_palette_manual}} for user-defined palettes.
+#' @details It is recommended to use not more than `n = 11` colours, as in that case additional colours are picked by interpolation.
 #' @import grDevices
 #' @export
 #'
@@ -101,13 +99,12 @@ get_uol_palette <- function(n = 3, intensity = c("full", "medium", "light"), met
 
 #' @title Manual colours palette generator
 #'
-#' @description \code{get_uol_palette_manual} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
+#' @description [get_uol_palette_manual()] return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
 #'
 #' @family get palettes
-#' @param colours A vector of colour names. See \code{\link{uol_colours}} for a list of possible colours.
-#' @param intensity Intensity of the desired palette. Possible values are \code{full}, \code{medium}, \code{light}. Defaults to \code{full}.
+#' @param colours A vector of colour names. See [`uol_colours`] for a list of possible colours.
+#' @param intensity Intensity of the desired palette. Possible values are `full`, `medium`, `light`. Defaults to `full`.
 #' @return A vector of colours, in HEX format.
-#' @seealso \code{\link{get_uol_palette_mono}} for monochromatic palettes, \code{\link{get_uol_palette}} for multicolour palettess.
 #' @export
 #'
 #' @examples

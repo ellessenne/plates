@@ -10,7 +10,7 @@ get_remarkjs_css(to = getwd())
 \item{to}{where to copy the default stylesheet}
 }
 \value{
-This function returns a logical value indicating whether the operation succeeded or not. Using a missing value for a file or path name will always be regarded as a failure: see \code{\link{file.copy}} for more details.
+This function returns a logical value indicating whether the operation succeeded or not. Using a missing value for a file or path name will always be regarded as a failure: see \link[base:file.copy]{base::file.copy} for more details.
 }
 \description{
 With \code{get_remarkjs_css()} you can copy the default stylesheet used for the UoL remark.js template to a given directory. This is useful if you want to tune the stylesheet yourself or implement new classes.

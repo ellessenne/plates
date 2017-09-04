@@ -7,10 +7,10 @@
 uol_beamer(...)
 }
 \arguments{
-\item{...}{Additional arguments to \code{rmarkdown::beamer_presentation}}
+\item{...}{Additional arguments to \code{\link[rmarkdown:beamer_presentation]{rmarkdown::beamer_presentation()}}}
 }
 \value{
-R Markdown output format to pass to \code{\link[rmarkdown:render]{render}}
+R Markdown output format to pass to \code{\link[rmarkdown:render]{rmarkdown::render()}}
 }
 \description{
 Write something here...

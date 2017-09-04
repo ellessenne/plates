@@ -12,13 +12,13 @@ get_uol_palette(n = 3, intensity = c("full", "medium", "light"),
 
 \item{intensity}{Intensity of the desired palette. Possible values are \code{full}, \code{medium}, \code{light}. Defaults to \code{full}.}
 
-\item{method}{Method used to pick colours. Possible values are \code{hue}, \code{saturation},\code{brightness}. Defaults to \code{hue}.}
+\item{method}{Method used to pick colours. Possible values are \code{hue}, \code{saturation}, \code{brightness}. Defaults to \code{hue}.}
 }
 \value{
 A vector of colours, in HEX format.
 }
 \description{
-\code{get_uol_palette} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
+\code{\link[=get_uol_palette]{get_uol_palette()}} return a vector of colours following the University of Leicester visual identity guidelines. It is possible to select the intensity of the palette, the number of colours, and the method used to pick colours. When a palette of 4-10 colours is requested, the colours in the full palette are sorted by the aforementioned method first, and then the required number of colours are selected by picking equally spaced colours on the ranks scale.
 }
 \details{
 It is recommended to use not more than \code{n = 11} colours, as in that case additional colours are picked by interpolation.
@@ -36,8 +36,6 @@ geom_point() +
 scale_color_manual(values = pl)
 }
 \seealso{
-\code{\link{get_uol_palette_mono}} for monochromatic palettes, \code{\link{get_uol_palette_manual}} for user-defined palettes.
-
 Other get palettes: \code{\link{get_uol_palette_manual}},
   \code{\link{get_uol_palette_mono}}
 }
