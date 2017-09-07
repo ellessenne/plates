@@ -5,6 +5,10 @@ body {
   font-family: 'Hind', sans-serif;
 }
 
+p {
+  font-size: var(--size-normalsize);
+}
+
 h1, h2, h3 {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -33,10 +37,6 @@ h1, h2, h3 {
   font-size: var(--size-normalsize);
 }
 
-.remark-slide-content ul, ol {
-  font-size: var(--size-normalsize);
-}
-
 .title-slide h1 {
   font-size: var(--size-huge);
 }
@@ -58,6 +58,10 @@ h1, h2, h3 {
 
 ul, ol {
   line-height: 1.5em;
+}
+
+li p {
+  font-size: var(--size-normalsize);
 }
 
 .red {
@@ -147,6 +151,11 @@ code {
 
 .remark-code, .remark-inline-code {
   font-family: 'Inconsolata', monospace;
+  font-size: var(--size-normalsize);
+}
+
+.mjx-chtml {
+  font-size: 100% !important;
 }
 
 .pull-left {
