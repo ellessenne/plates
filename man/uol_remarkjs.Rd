@@ -20,7 +20,7 @@ This format is a wrapper around \code{\link[xaringan:moon_reader]{xaringan::moon
 \note{
 Do not trust the preview of the presentation from the RStudio viewer or window. Instead, open the presentation with a web browser and refresh to see changes.
 
-Include \code{css: ["default", "uol_remarkjs"]} in the YAML header to include the standard \code{xaringan} stylesheet. That improves printing to PDF using Google Chrome, among others. More details on printing to PDF: \href{https://github.com/yihui/xaringan/issues/65}{#65} and \href{https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF}{here}.
+Print to \code{.pdf} works best if using Chrome; more details on printing to PDF: \href{https://github.com/yihui/xaringan/issues/65}{#65} and \href{https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF}{here}.
 }
 \examples{
 
