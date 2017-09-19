@@ -140,10 +140,11 @@ a:active, a#active {
   text-decoration: underline;
 }
 
-.references li {
-    padding: 0;
-    margin: 0;
-    line-height: 1em;
+/* Spacing between items of a ul/ol is governed by p padding and margin: */
+.references li p {
+  font-size: var(--size-small);
+  padding: 0;
+  margin: 0;
 }
 
 code {
