@@ -142,7 +142,7 @@ a:active, a#active {
 
 /* Spacing between items of a ul/ol is governed by p padding and margin: */
 .references li p {
-  font-size: var(--size-small);
+  font-size: var(--size-references);
   padding: 0;
   margin: 0;
 }
@@ -365,6 +365,8 @@ table tr th :last-child, table tr td :last-child {
   --size-LARGE: 1.900838901em;
   --size-huge: 2.281006681em;
   --size-Huge: 2.281006681em;
+  /* size for list of reference: midpoint between tiny and small */
+  --size-references: 0.8401818em;
 }
 
 /* Logos: */
