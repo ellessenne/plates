@@ -1,6 +1,6 @@
 #' Wrap output to a given width
 #'
-#' @desription `wrap_linewidth()` wrap the output from an R code chunk to a given width, specified by the global option `width`. Usage is pretty straighforward: set the global `width` option to a given value, set the knitr chunk option `linewidth` to `getOption("width")`, and call `wrap_linewidth()`. Further details [here](https://github.com/yihui/knitr-examples/blob/master/077-wrap-output.Rmd).
+#' @description `wrap_linewidth()` wrap the output from an R code chunk to a given width, specified by the global option `width`. Usage is pretty straighforward: set the global `width` option to a given value, set the knitr chunk option `linewidth` to `getOption("width")`, and call `wrap_linewidth()`. Further details [here](https://github.com/yihui/knitr-examples/blob/master/077-wrap-output.Rmd).
 #'
 #' @export
 #'
