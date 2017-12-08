@@ -25,7 +25,7 @@ accent: orange
 ```{r setup, include = FALSE}
 library(knitr)
 options(width = 60)
-opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
 uolvid::wrap_linewidth()
 ```
 

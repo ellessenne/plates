@@ -1,7 +1,6 @@
 #' @title Complete list of palettes
 #'
-#' @description Use the functions [get_uol_palette()], [get_uol_palette_mono()], [get_uol_palette_manual()] to obtain the desired color palette.
-#' Plase note that `blue`, `grey`, and `brown` are all primary colours, while the remaining are secondary ones.
+#' @description Use the functions [get_uol_palette()], [get_uol_palette_mono()], [get_uol_palette_manual()] to obtain the desired color palette. Please note that `blue`, `grey`, and `brown` are all primary colours, while the remaining are secondary ones.
 #' @return A list of colors, in HEX format.
 #'
 #' @export

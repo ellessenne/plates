@@ -2,7 +2,7 @@
 % Please edit documentation in R/uol_beamer.R
 \name{uol_beamer}
 \alias{uol_beamer}
-\title{A minimal beamer template following University of leicester visual identity guidelines}
+\title{A minimal beamer template following University of Leicester visual identity guidelines}
 \usage{
 uol_beamer(...)
 }
@@ -13,7 +13,7 @@ uol_beamer(...)
 R Markdown output format to pass to \code{\link[rmarkdown:render]{rmarkdown::render()}}
 }
 \description{
-Write something here...
+A beamer template following University of Leicester visual identity guidelines
 }
 \examples{
 

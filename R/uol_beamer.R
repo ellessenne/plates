@@ -1,7 +1,6 @@
-#' A minimal beamer template following University of leicester visual identity guidelines
+#' A minimal beamer template following University of Leicester visual identity guidelines
 #'
-#' Write something here...
-#'
+#' @description A beamer template following University of Leicester visual identity guidelines
 #' @inheritParams rmarkdown::beamer_presentation
 #' @param ... Additional arguments to [rmarkdown::beamer_presentation()]
 #'
@@ -15,7 +14,7 @@
 #' }
 #'
 #' @export
-uol_beamer <- function(...) {
+uol_beamer = function(...) {
   rmarkdown::beamer_presentation(...,
                                  template = find_resource("uol_beamer", "template.tex"),
                                  latex_engine = "xelatex",

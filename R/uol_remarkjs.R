@@ -1,6 +1,6 @@
 #' A minimal Remark.js template following University of Leicester visual identity guidelines
 #'
-#' This format is a wrapper around [xaringan::moon_reader()]. It includes a custom .css file following visual identity guidelines issued by the University of Leicester.
+#' @description This format is a wrapper around [xaringan::moon_reader()]. It includes a custom .css file following visual identity guidelines issued by the University of Leicester.
 #'
 #' @inheritParams xaringan::moon_reader
 #' @param ... Additional arguments passed to [xaringan::moon_reader()]
@@ -16,7 +16,7 @@
 #' }
 #'
 #' @export
-uol_remarkjs <- function(..., css = "uol_remarkjs") {
+uol_remarkjs = function(..., css = "uol_remarkjs") {
   if ("uol_remarkjs" %in% css) css = c(setdiff(css, "uol_remarkjs"), find_resource("uol_remarkjs", "uol_remarkjs.css"))
   xaringan::moon_reader(css = css, ...)
 }

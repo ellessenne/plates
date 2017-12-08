@@ -58,7 +58,7 @@ get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "ye
 #' ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
 #' geom_point() +
 #' scale_color_manual(values = pl)
-get_uol_palette <- function(n = 3, intensity = c("full", "medium", "light"), method = c("hue", "saturation", "brightness")) {
+get_uol_palette = function(n = 3, intensity = c("full", "medium", "light"), method = c("hue", "saturation", "brightness")) {
   intensity = match.arg(intensity)
   method = match.arg(method)
   if (n < 2) stop("To get monochromatic palettes use the 'get_uol_palette_mono()' function.")
@@ -110,7 +110,7 @@ get_uol_palette <- function(n = 3, intensity = c("full", "medium", "light"), met
 #' @examples
 #' get_uol_palette_manual(c("red", "blue", "yellow"))
 #' get_uol_palette_manual(c("red", "blue", "yellow"), intensity = "medium")
-get_uol_palette_manual <- function(colours, intensity = c("full", "medium", "light")) {
+get_uol_palette_manual = function(colours, intensity = c("full", "medium", "light")) {
   intensity = match.arg(intensity)
   if (!all(colours %in% c("blue", "grey", "brown", "pink", "yellow", "green", "red", "purple", "lightblue", "orange", "brightgreen"))) stop("Unknown colour. See ?uol_colours for a list of available colours.")
   if (length(colours) < 2) stop("Use get_uol_palette_mono() for a monochromatic palette.")
@@ -126,7 +126,7 @@ get_uol_palette_manual <- function(colours, intensity = c("full", "medium", "lig
 
 #' @import graphics
 #' @export
-print.palette <- function(x, ...) {
+print.palette = function(x, ...) {
   n = length(x)
   old = par(mar = c(0.5, 0.5, 0.5, 0.5))
   on.exit(par(old))
