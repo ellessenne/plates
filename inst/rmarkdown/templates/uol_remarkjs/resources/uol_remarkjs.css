@@ -64,20 +64,20 @@ li p {
   color: var(--colour-uol-red);
 }
 
-.midcenter {
+.content-midcenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-.middle {
+.content-middle {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.center {
+.content-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
