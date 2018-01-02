@@ -16,7 +16,7 @@
 #' }
 #'
 #' @export
-uol_remarkjs = function(..., css = "uol_remarkjs") {
-  if ("uol_remarkjs" %in% css) css = c(setdiff(css, "uol_remarkjs"), find_resource("uol_remarkjs", "uol_remarkjs.css"))
+uol_remarkjs <- function(..., css = "uol_remarkjs") {
+  if ("uol_remarkjs" %in% css) css <- c(setdiff(css, "uol_remarkjs"), find_resource("uol_remarkjs", "uol_remarkjs.css"))
   xaringan::moon_reader(css = css, ...)
 }

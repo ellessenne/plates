@@ -14,10 +14,12 @@
 #' }
 #'
 #' @export
-uol_beamer = function(...) {
-  rmarkdown::beamer_presentation(...,
-                                 template = find_resource("uol_beamer", "template.tex"),
-                                 latex_engine = "xelatex",
-                                 keep_tex = TRUE,
-                                 highlight = NULL)
+uol_beamer <- function(...) {
+  rmarkdown::beamer_presentation(
+    ...,
+    template = find_resource("uol_beamer", "template.tex"),
+    latex_engine = "xelatex",
+    keep_tex = TRUE,
+    highlight = NULL
+  )
 }

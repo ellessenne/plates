@@ -16,20 +16,20 @@
 #' get_uol_palette_mono(colour = "red", n = 2)
 
 get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "yellow", "green", "red", "purple", "lightblue", "orange", "brightgreen"), n = 3) {
-  colour = match.arg(colour)
+  colour <- match.arg(colour)
   if (n > 3) warning("n > 3: colours will be interpolated (not recommended).")
 
-  pal = uol_colours[[colour]]
+  pal <- uol_colours[[colour]]
 
-  out = if (n == 1) {
+  out <- if (n == 1) {
     pal[1]
-    } else if (n == 2) {
-      pal[1:2]
-    } else if (n == 3) {
-      pal
-    } else {
-      colorRampPalette(pal)(n)
-    }
+  } else if (n == 2) {
+    pal[1:2]
+  } else if (n == 3) {
+    pal
+  } else {
+    colorRampPalette(pal)(n)
+  }
   names(out) <- NULL
   structure(out, class = "palette", colour = colour, palette = "mono")
 }
@@ -58,23 +58,25 @@ get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "ye
 #' ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
 #' geom_point() +
 #' scale_color_manual(values = pl)
-get_uol_palette = function(n = 3, intensity = c("full", "medium", "light"), method = c("hue", "saturation", "brightness")) {
-  intensity = match.arg(intensity)
-  method = match.arg(method)
+get_uol_palette <- function(n = 3, intensity = c("full", "medium", "light"), method = c("hue", "saturation", "brightness")) {
+  intensity <- match.arg(intensity)
+  method <- match.arg(method)
   if (n < 2) stop("To get monochromatic palettes use the 'get_uol_palette_mono()' function.")
   if (n > 11) warning("n > 11 not recommended: colors will be interpolated.")
 
   # Get colors
-  pal = switch(intensity,
-               full = sapply(uol_colours, function(x) x[1]),
-               medium = sapply(uol_colours, function(x) x[2]),
-               light = sapply(uol_colours, function(x) x[3]))
+  pal <- switch(intensity,
+    full = sapply(uol_colours, function(x) x[1]),
+    medium = sapply(uol_colours, function(x) x[2]),
+    light = sapply(uol_colours, function(x) x[3])
+  )
 
   # Get order quantity
-  ordq = switch(method,
-                hue = rgb2hsv(col2rgb(pal))["h",],
-                saturation = rgb2hsv(col2rgb(pal))["s",],
-                brightness = rgb2hsv(col2rgb(pal))["v",])
+  ordq <- switch(method,
+    hue = rgb2hsv(col2rgb(pal))["h", ],
+    saturation = rgb2hsv(col2rgb(pal))["s", ],
+    brightness = rgb2hsv(col2rgb(pal))["v", ]
+  )
 
   # Make palette
   # Algorithm for n = 2: pick red, blue
@@ -83,7 +85,7 @@ get_uol_palette = function(n = 3, intensity = c("full", "medium", "light"), meth
   # For n = 11, that resolves to taking all the colors
   # For n > 11, missing colors will be interpolated, after sorting by the mixed scale (option not recommended)
 
-  out = if (n == 2) {
+  out <- if (n == 2) {
     pal[c("blue", "red")]
   } else if (n == 3) {
     pal[c("blue", "red", "brightgreen")]
@@ -110,27 +112,28 @@ get_uol_palette = function(n = 3, intensity = c("full", "medium", "light"), meth
 #' @examples
 #' get_uol_palette_manual(c("red", "blue", "yellow"))
 #' get_uol_palette_manual(c("red", "blue", "yellow"), intensity = "medium")
-get_uol_palette_manual = function(colours, intensity = c("full", "medium", "light")) {
-  intensity = match.arg(intensity)
+get_uol_palette_manual <- function(colours, intensity = c("full", "medium", "light")) {
+  intensity <- match.arg(intensity)
   if (!all(colours %in% c("blue", "grey", "brown", "pink", "yellow", "green", "red", "purple", "lightblue", "orange", "brightgreen"))) stop("Unknown colour. See ?uol_colours for a list of available colours.")
   if (length(colours) < 2) stop("Use get_uol_palette_mono() for a monochromatic palette.")
 
-  pal = switch(intensity,
-               full = sapply(uol_colours, function(x) x[1]),
-               medium = sapply(uol_colours, function(x) x[2]),
-               light = sapply(uol_colours, function(x) x[3]))
-  out = pal[colours]
+  pal <- switch(intensity,
+    full = sapply(uol_colours, function(x) x[1]),
+    medium = sapply(uol_colours, function(x) x[2]),
+    light = sapply(uol_colours, function(x) x[3])
+  )
+  out <- pal[colours]
   names(out) <- NULL
   structure(out, class = "palette", intensity = intensity, palette = "manual")
 }
 
 #' @import graphics
 #' @export
-print.palette = function(x, ...) {
-  n = length(x)
-  old = par(mar = c(0.5, 0.5, 0.5, 0.5))
+print.palette <- function(x, ...) {
+  n <- length(x)
+  old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
   on.exit(par(old))
   image(1:n, 1, as.matrix(1:n), col = x, ylab = "", xaxt = "n", yaxt = "n", bty = "n")
-  rect(0, 0.95, n + 1, 1.05, col = rgb(1, 1, 1, 2/3), border = NA)
+  rect(0, 0.95, n + 1, 1.05, col = rgb(1, 1, 1, 2 / 3), border = NA)
   text((n + 1) / 2, 1, labels = ifelse(attr(x, "palette") == "mono", paste("Monochromatic palette:", attr(x, "colour")), ifelse(attr(x, "palette") == "manual", paste("Manual palette with intensity:", attr(x, "intensity")), paste0("Palette with intensity: ", attr(x, "intensity"), ", method: ", attr(x, "palette")))), cex = 1)
 }

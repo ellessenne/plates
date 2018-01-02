@@ -16,4 +16,5 @@ uol_colours <- list(
   lightblue = c("#009BC8", "#00AFD4", "#BCDDE9"),
   purple = c("#832672", "#A5649C", "#D7C6DA"),
   yellow = c("#DFCB00", "#EADB75", "#F2ECC3"),
-  pink = c("#D60B7B", "#DE76A4", "#EECEDC"))
+  pink = c("#D60B7B", "#DE76A4", "#EECEDC")
+)

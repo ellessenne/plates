@@ -11,17 +11,18 @@
 #' uolvid:::wrap_linewidth()
 #' }
 
-wrap_linewidth = function() {
-  hook_output = knitr::knit_hooks$get("output")
+wrap_linewidth <- function() {
+  hook_output <- knitr::knit_hooks$get("output")
   knitr::knit_hooks$set(
     output = function(x, options) {
       # this hook is used only when the linewidth option is not NULL
       if (!is.null(n <- options$linewidth)) {
-        x = split_lines(x)
+        x <- split_lines(x)
         # any lines wider than n should be wrapped
-        if (any(nchar(x) > n))
-          x = strwrap(x, width = n)
-        x = paste(x, collapse = '\n')
+        if (any(nchar(x) > n)) {
+          x <- strwrap(x, width = n)
+        }
+        x <- paste(x, collapse = "\n")
       }
       hook_output(x, options)
     }
@@ -29,8 +30,8 @@ wrap_linewidth = function() {
 }
 
 # Copied and adapted from rticles package:
-find_file = function(template, file) {
-  template = system.file("rmarkdown", "templates", template, file, package = "uolvid")
+find_file <- function(template, file) {
+  template <- system.file("rmarkdown", "templates", template, file, package = "uolvid")
   if (template == "") {
     stop("Couldn't find template file ", template, "/", file, call. = FALSE)
   }
@@ -43,11 +44,11 @@ find_resource <- function(template, file) {
 }
 
 # Copied from knitr internal
-split_lines = function(x)
-{
-  if (length(grep("\n", x)) == 0L)
+split_lines <- function(x) {
+  if (length(grep("\n", x)) == 0L) {
     return(x)
-  con = textConnection(x)
+  }
+  con <- textConnection(x)
   on.exit(close(con))
   readLines(con)
 }
@@ -68,7 +69,9 @@ split_lines = function(x)
 #' get_remarkjs_css(to = "temp")
 #' }
 
-get_remarkjs_css = function(to = getwd()) {
-  file.copy(from = find_resource("uol_remarkjs", "uol_remarkjs.css"),
-            to = to)
+get_remarkjs_css <- function(to = getwd()) {
+  file.copy(
+    from = find_resource("uol_remarkjs", "uol_remarkjs.css"),
+    to = to
+  )
 }
