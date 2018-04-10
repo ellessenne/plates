@@ -4,51 +4,22 @@
 
 Included tools are:
 
-- a minimal beamer template, with customisable colours;
-
+- a `beamer` template, with a coloured title slide and customisable colours;
+- a `beamer` template, with a white title slide and customisable colours;
+- a `remark.js` template, based on the [`xaringan`](https://github.com/yihui/xaringan
+) package;
 - colour palette generators;
-
 - ...
-
-Included are:
-
-- `uol_colours`, a list of all the codes in HEX format;
-
-- `get_uol_palette()`, `get_uol_palette_mono()`, and `get_uol_palette_manual()`, three functions to obtain various colour palettes.
 
 # Installation
 
-Install the package from Github using `devtools`:
+`uolvid` is only on GitHub at the moment, and may never make it to CRAN. Install the package from Github using `devtools`:
 
 ```r
 library(devtools)
 devtools::install_github("ellessenne/uolvid")
 ```
-# Usage
 
-Usage of this package is very simple: it is enough to call a palette generator function and store it in a variable:
+# Templates
 
-```r
-library(uolvid)
-palette <- get_uol_palette(n = 4)
-palette
-```
-
-A basic example using `ggplot2`:
-
-```r
-library(ggplot2)
-ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
-  geom_point() +
-  scale_color_manual(values = palette)
-```
-
-# To-do
-
-A non-exhaustive list of future developments includes:
-
-- [ ] `ggplot2` custom `scale_color_*` and `scale_fill_*` functions;
-
-- [ ] a whole `ggplot2` theme;
-
-- [ ] ...
+All templates can be used by following `New file` > `R Markdown...` > `From Template` in RStudio.
