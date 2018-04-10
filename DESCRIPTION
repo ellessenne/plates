@@ -1,20 +1,26 @@
 Package: uolvid
-Type: Package
 Title: University of Leicester Visual Identity Tools
-Version: 0.0.0.9000
-Date: 2017-12-08
-Author: Alessandro Gasparini [aut, cre]
-Maintainer: Alessandro Gasparini <ag475@leicester.ac.uk>
+Version: 0.0.0-9000
+Date: 2018-04-10
+Authors@R: c(
+  person(given = "Alessandro", 
+         family = "Gasparini", 
+         role = c("aut", "cre"), 
+         email = "ag475@leicester.ac.uk",
+         comment = c(ORCID = "0000-0002-8319-7624"))
+  )
+License: GPL (>= 3)
 Description: Visual identity tools and templates following the University of Leicester design guidelines.
-License: GPL-3
-Encoding: UTF-8
-LazyData: true
 URL: https://github/com/ellessenne/uolvid
 BugReports: https://github/com/ellessenne/uolvid/issues
-Imports: 
-    ggplot2, 
-    knitr,
-    rmarkdown, 
-    xaringan
-RoxygenNote: 6.0.1
+Imports:
+  ggplot2, 
+  knitr,
+  rmarkdown, 
+  xaringan
+VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true

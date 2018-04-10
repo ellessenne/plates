@@ -1,6 +1,5 @@
 % the various libraries we will be using
 \usepackage[none]{hyphenat}
-\usepackage[no-math]{fontspec}
 \usepackage{tikz}
 
 %%%%% colour options
@@ -99,37 +98,16 @@
 <all>
 
 %%%%% fonts options
-%%%%% current fonts downloaded from fonts.google.com
-% set directory with all the fonts:
-\newcommand*{\fontdir}[1][Fonts/]{\def\@fontdir{#1}}
-\fontdir
-
-% main font (serif) for titles:
-\setromanfont{Lora}[
-  Path = \@fontdir,
-  UprightFont = *-Regular,
-  BoldFont = *-Bold,
-]
-
-% mono font for code:
-\setmonofont{Inconsolata}[
-  Path=\@fontdir,
-  UprightFont = *-Regular,
-  BoldFont = *-Bold,
-]
-
-% sans serif font for everything else
-\setsansfont{Hind}[
-  Path=\@fontdir,
-  UprightFont = *-Regular,
-  BoldFont = *-Bold,
-]
+%%%%% using Google Noto typeface and Inconsolata for fixed-width
+\usepackage{noto-serif}
+\usepackage{noto-sans}
+\usepackage{zi4}
 
 \setbeamerfont{title}{family=\rmfamily, size=\Large}
 \setbeamerfont{subtitle}{family=\rmfamily}
 \setbeamerfont{author}{family=\rmfamily, size=\small}
 \setbeamerfont{institute}{family=\rmfamily, size=\tiny}
-\setbeamerfont{date}{family=\rmfamily, size=\footnotesize}
+\setbeamerfont{date}{family=\rmfamily, size=\small}
 \setbeamerfont{frametitle}{family=\rmfamily}
 \setbeamerfont{footnote}{size=\tiny}
 \setbeamerfont{footnote mark}{size=\tiny}

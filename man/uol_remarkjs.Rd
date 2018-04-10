@@ -9,10 +9,14 @@ uol_remarkjs(..., css = "uol_remarkjs")
 \arguments{
 \item{...}{Additional arguments passed to \code{\link[xaringan:moon_reader]{xaringan::moon_reader()}}}
 
-\item{css}{A vector of CSS file paths. A default CSS file is provided in this
+\item{css}{A vector of CSS file paths. Two default CSS files
+(\file{default.css} and \file{default-fonts.css}) are provided in this
 package, which was borrowed from \url{https://remarkjs.com}. If the
-character vector \code{css} contains the value \code{'default'}, the
-default CSS will be used (e.g. \code{css = c('default', 'extra.css')}).}
+character vector \code{css} contains a value that does not end with
+\code{.css}, it is supposed to be a built-in CSS file in this package,
+e.g., for \code{css = c('default', 'extra.css')}), it means
+\code{default.css} in this package and a user-provided \code{extra.css}. To
+find out all built-in CSS files, use \code{xaringan:::list_css()}.}
 }
 \description{
 This format is a wrapper around \code{\link[xaringan:moon_reader]{xaringan::moon_reader()}}. It includes a custom .css file following visual identity guidelines issued by the University of Leicester.

@@ -1,0 +1,63 @@
+---
+title: A minimal presentation template following UoL visual identity guidelines
+short_title: Short title
+author:
+  - name: Alessandro Gasparini
+    inst: "1,2"
+  - name: Another Author
+    inst: 2
+  - name: And-Another One
+    inst: 1
+short_author: ag475@leicester.ac.uk
+institute:
+  - inst: 1
+    institute: Department of Health Sciences, University of Leicester, Leicester, United Kingdom
+  - inst: 2
+    institute: Department of Something, University of Somewhere, Somewhere, Nice Country
+date: "`r Sys.Date()`"
+output: uolvid::uol_beamer_white
+aspectratio: 32
+t: true
+primary: blue
+accent: orange
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+options(width = 60)
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
+uolvid::wrap_linewidth()
+```
+
+# R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+# Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+# Slide with R Output
+
+```{r, echo = TRUE}
+summary(cars)
+```
+
+# Slide with Plot
+
+```{r, out.width = "0.666\\paperwidth"}
+plot(pressure)
+```
+
+# Slide with Code
+
+How to generate random values from a normal distribution:
+
+```{r, echo = TRUE}
+x = rnorm(10)
+x
+```

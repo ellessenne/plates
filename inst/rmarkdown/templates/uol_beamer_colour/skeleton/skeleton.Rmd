@@ -14,8 +14,8 @@ institute:
     institute: Department of Health Sciences, University of Leicester, Leicester, United Kingdom
   - inst: 2
     institute: Department of Something, University of Somewhere, Somewhere, Nice Country
-date: "Sys.Date()"
-output: uolvid::uol_beamer
+date: "`r Sys.Date()`"
+output: uolvid::uol_beamer_colour
 aspectratio: 32
 t: true
 primary: blue

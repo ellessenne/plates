@@ -1,4 +1,4 @@
-#' A minimal beamer template following University of Leicester visual identity guidelines
+#' A minimal, white beamer template following University of Leicester visual identity guidelines
 #'
 #' @description A beamer template following University of Leicester visual identity guidelines
 #' @inheritParams rmarkdown::beamer_presentation
@@ -10,15 +10,14 @@
 #'
 #' \dontrun{
 #' library(rmarkdown)
-#' draft("my_presentation.Rmd", template = "uol_beamer", package = "uolvid")
+#' draft("my_presentation.Rmd", template = "uol_beamer_white", package = "uolvid")
 #' }
 #'
 #' @export
-uol_beamer <- function(...) {
+uol_beamer_white <- function(...) {
   rmarkdown::beamer_presentation(
     ...,
-    template = find_resource("uol_beamer", "template.tex"),
-    latex_engine = "xelatex",
+    template = find_resource("uol_beamer_white", "template.tex"),
     keep_tex = TRUE,
     highlight = NULL
   )
