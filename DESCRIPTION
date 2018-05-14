@@ -1,7 +1,7 @@
 Package: uolvid
 Title: University of Leicester Visual Identity Tools
-Version: 0.0.0-9000
-Date: 2018-04-10
+Version: 0.0.0-9001
+Date: 2018-05-14
 Authors@R: c(
   person(given = "Alessandro", 
          family = "Gasparini", 
