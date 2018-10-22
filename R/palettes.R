@@ -14,7 +14,6 @@
 #' get_uol_palette_mono()
 #' get_uol_palette_mono(colour = "blue")
 #' get_uol_palette_mono(colour = "red", n = 2)
-
 get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "yellow", "green", "red", "purple", "lightblue", "orange", "brightgreen"), n = 3) {
   colour <- match.arg(colour)
   if (n > 3) warning("n > 3: colours will be interpolated (not recommended).")
@@ -52,12 +51,12 @@ get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "ye
 #' get_uol_palette(n = 5)
 #' get_uol_palette(n = 5, intensity = "medium")
 #' get_uol_palette(n = 5, method = "brightness")
-#'
+#' 
 #' library(ggplot2)
-#' pl = get_uol_palette(n = 10)
+#' pl <- get_uol_palette(n = 10)
 #' ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
-#' geom_point() +
-#' scale_color_manual(values = pl)
+#'   geom_point() +
+#'   scale_color_manual(values = pl)
 get_uol_palette <- function(n = 3, intensity = c("full", "medium", "light"), method = c("hue", "saturation", "brightness")) {
   intensity <- match.arg(intensity)
   method <- match.arg(method)

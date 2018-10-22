@@ -23,4 +23,5 @@ get_remarkjs_css()
 # Copy the default stylesheet to the "temp" directory
 get_remarkjs_css(to = "temp")
 }
+
 }

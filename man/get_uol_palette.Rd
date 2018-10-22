@@ -30,12 +30,13 @@ get_uol_palette(n = 5, intensity = "medium")
 get_uol_palette(n = 5, method = "brightness")
 
 library(ggplot2)
-pl = get_uol_palette(n = 10)
+pl <- get_uol_palette(n = 10)
 ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
-geom_point() +
-scale_color_manual(values = pl)
+  geom_point() +
+  scale_color_manual(values = pl)
 }
 \seealso{
 Other get palettes: \code{\link{get_uol_palette_manual}},
   \code{\link{get_uol_palette_mono}}
 }
+\concept{get palettes}

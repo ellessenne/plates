@@ -9,12 +9,12 @@
 #'
 #' @note Print to `.pdf` works best if using Chrome; more details on printing to PDF: [#65](https://github.com/yihui/xaringan/issues/65) and [here](https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF).
 #' @examples
-#'
+#' 
 #' \dontrun{
 #' library(rmarkdown)
 #' draft("my_presentation.Rmd", template = "uol_remarkjs", package = "uolvid")
 #' }
-#'
+#' 
 #' @export
 uol_remarkjs <- function(..., css = "uol_remarkjs") {
   if ("uol_remarkjs" %in% css) css <- c(setdiff(css, "uol_remarkjs"), find_resource("uol_remarkjs", "uol_remarkjs.css"))

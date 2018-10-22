@@ -10,7 +10,7 @@
 #' knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
 #' uolvid:::wrap_linewidth()
 #' }
-
+#' 
 wrap_linewidth <- function() {
   hook_output <- knitr::knit_hooks$get("output")
   knitr::knit_hooks$set(
@@ -64,11 +64,11 @@ split_lines <- function(x) {
 #' \dontrun{
 #' # Copy the default stylesheet to the current working directory
 #' get_remarkjs_css()
-#'
+#' 
 #' # Copy the default stylesheet to the "temp" directory
 #' get_remarkjs_css(to = "temp")
 #' }
-
+#' 
 get_remarkjs_css <- function(to = getwd()) {
   file.copy(
     from = find_resource("uol_remarkjs", "uol_remarkjs.css"),

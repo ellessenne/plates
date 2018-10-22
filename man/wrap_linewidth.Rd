@@ -15,4 +15,5 @@ options(width = 60)
 knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
 uolvid:::wrap_linewidth()
 }
+
 }
