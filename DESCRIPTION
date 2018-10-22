@@ -1,7 +1,7 @@
 Package: uolvid
 Title: University of Leicester Visual Identity Tools
-Version: 0.0.0-9001
-Date: 2018-05-14
+Version: 0.0.0-9002
+Date: 2018-10-22
 Authors@R: c(
   person(given = "Alessandro", 
          family = "Gasparini", 
@@ -20,7 +20,7 @@ Imports:
   xaringan
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true

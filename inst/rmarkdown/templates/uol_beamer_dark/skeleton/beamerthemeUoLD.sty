@@ -1,0 +1,236 @@
+% the various libraries we will be using
+\usepackage[none]{hyphenat} % disables word hyphenating in titles
+\usepackage{tikz}
+
+%%%%% colour options
+% corporate colours
+\def\beamer@UoL@cred{cred}%
+\def\beamer@UoL@cgrey{cgrey}%
+\def\beamer@UoL@white{white}%
+% bright colours
+\def\beamer@UoL@vred{vred}%
+\def\beamer@UoL@orange{orange}%
+\def\beamer@UoL@wyellow{wyellow}%
+\def\beamer@UoL@vcgreen{vcgreen}%
+\def\beamer@UoL@dgreen{dgreen}%
+\def\beamer@UoL@mgreen{mgreen}%
+\def\beamer@UoL@agreen{agreen}%
+\def\beamer@UoL@dblue{dblue}%
+\def\beamer@UoL@mblue{mblue}%
+\def\beamer@UoL@lblue{lblue}%
+\def\beamer@UoL@mablue{mablue}%
+
+% process primary color
+\DeclareOptionBeamer{primary}{\def\beamer@UoL@primary{#1}}
+\ExecuteOptionsBeamer{primary=cgrey}
+\ProcessOptionsBeamer
+
+\ifx\beamer@UoL@primary\beamer@UoL@cred%
+  \definecolor{primary}{HTML}{B92034} % corporate red
+\else%
+  \ifx\beamer@UoL@primary\beamer@UoL@cgrey%
+    \definecolor{primary}{HTML}{515B64} % corporate grey
+  \else%
+    \ifx\beamer@UoL@primary\beamer@UoL@white%
+      \definecolor{primary}{HTML}{FFFFFF} % white
+    \else%
+      \ifx\beamer@UoL@primary\beamer@UoL@vred%
+        \definecolor{primary}{HTML}{EE3130} % vred
+      \else%
+        \ifx\beamer@UoL@primary\beamer@UoL@orange%
+          \definecolor{primary}{HTML}{EB6F1B} % orange
+        \else%
+          \ifx\beamer@UoL@primary\beamer@UoL@wyellow%
+            \definecolor{primary}{HTML}{EBA411} % wyellow
+          \else%
+            \ifx\beamer@UoL@primary\beamer@UoL@vcgreen%
+              \definecolor{primary}{HTML}{093323} % vcgreen
+            \else%
+              \ifx\beamer@UoL@primary\beamer@UoL@dgreen%
+                \definecolor{primary}{HTML}{004D27} % dgreen
+              \else%
+                \ifx\beamer@UoL@primary\beamer@UoL@mgreen%
+                  \definecolor{primary}{HTML}{B0AE24} % mgreen
+                \else%
+                  \ifx\beamer@UoL@primary\beamer@UoL@agreen%
+                    \definecolor{primary}{HTML}{B0AE24} % agreen
+                  \else%
+                    \ifx\beamer@UoL@primary\beamer@UoL@dblue%
+                      \definecolor{primary}{HTML}{002B4A} % dblue
+                    \else%
+                      \ifx\beamer@UoL@primary\beamer@UoL@mblue%
+                        \definecolor{primary}{HTML}{00508C} % mblue
+                      \else%
+                        \ifx\beamer@UoL@primary\beamer@UoL@lblue%
+                          \definecolor{primary}{HTML}{8CBAD4} % lblue
+                        \else%
+                          \definecolor{primary}{HTML}{002B4A} % mablue
+                        \fi%
+                      \fi%
+                    \fi%
+                  \fi%
+                \fi%
+              \fi%
+            \fi%
+          \fi%
+        \fi%
+      \fi%
+    \fi%
+  \fi%
+\fi%
+
+% process accent color
+\DeclareOptionBeamer{accent}{\def\beamer@UoL@accent{#1}}
+\ExecuteOptionsBeamer{accent=wyellow}
+\ProcessOptionsBeamer
+
+\ifx\beamer@UoL@accent\beamer@UoL@cred%
+  \definecolor{accent}{HTML}{B92034} % corporate red
+\else%
+  \ifx\beamer@UoL@accent\beamer@UoL@cgrey%
+    \definecolor{accent}{HTML}{515B64} % corporate grey
+  \else%
+    \ifx\beamer@UoL@accent\beamer@UoL@white%
+      \definecolor{accent}{HTML}{FFFFFF} % white
+    \else%
+      \ifx\beamer@UoL@accent\beamer@UoL@vred%
+        \definecolor{accent}{HTML}{EE3130} % vred
+      \else%
+        \ifx\beamer@UoL@accent\beamer@UoL@orange%
+          \definecolor{accent}{HTML}{EB6F1B} % orange
+        \else%
+          \ifx\beamer@UoL@accent\beamer@UoL@wyellow%
+            \definecolor{accent}{HTML}{EBA411} % wyellow
+          \else%
+            \ifx\beamer@UoL@accent\beamer@UoL@vcgreen%
+              \definecolor{accent}{HTML}{093323} % vcgreen
+            \else%
+              \ifx\beamer@UoL@accent\beamer@UoL@dgreen%
+                \definecolor{accent}{HTML}{004D27} % dgreen
+              \else%
+                \ifx\beamer@UoL@accent\beamer@UoL@mgreen%
+                  \definecolor{accent}{HTML}{B0AE24} % mgreen
+                \else%
+                  \ifx\beamer@UoL@accent\beamer@UoL@agreen%
+                    \definecolor{accent}{HTML}{B0AE24} % agreen
+                  \else%
+                    \ifx\beamer@UoL@accent\beamer@UoL@dblue%
+                      \definecolor{accent}{HTML}{002B4A} % dblue
+                    \else%
+                      \ifx\beamer@UoL@accent\beamer@UoL@mblue%
+                        \definecolor{accent}{HTML}{00508C} % mblue
+                      \else%
+                        \ifx\beamer@UoL@accent\beamer@UoL@lblue%
+                          \definecolor{accent}{HTML}{8CBAD4} % lblue
+                        \else%
+                          \definecolor{accent}{HTML}{002B4A} % mablue
+                        \fi%
+                      \fi%
+                    \fi%
+                  \fi%
+                \fi%
+              \fi%
+            \fi%
+          \fi%
+        \fi%
+      \fi%
+    \fi%
+  \fi%
+\fi%
+
+% assign colours
+\setbeamercolor{normal text}{bg = primary, fg = white}
+\setbeamercolor{itemize item}{fg = white}
+\setbeamercolor{itemize subitem}{fg = white}
+\setbeamercolor{itemize subsubitem}{fg = white}
+\setbeamercolor{enumerate item}{fg = white}
+\setbeamercolor{enumerate subitem}{fg = white}
+\setbeamercolor{enumerate subsubitem}{fg = white}
+\setbeamercolor{title}{fg = white}
+\setbeamercolor{author}{fg = white}
+\setbeamercolor{date}{fg = white}
+\setbeamercolor{institute}{fg = white}
+\setbeamercolor{frametitle}{fg = white}
+\setbeamercolor{section in toc}{fg = white}
+\setbeamercolor{author in head/foot}{fg = white, bg = primary}
+\setbeamercolor{title in head/foot}{fg = white, bg = primary}
+\setbeamercolor{date in head/foot}{fg = white, bg = primary}
+\setbeamercolor{section in head/foot}{fg = white, bg = primary}
+\setbeamercolor{subsection in head/foot}{fg = white, bg = primary}
+\setbeamercolor{alerted text}{fg = accent}
+\setbeamercolor{footline}{fg = white}
+\setbeamercolor{footlinecolor}{fg = white, bg = primary}
+\setbeamercolor{footlinecolor}{fg = white, bg = primary}
+
+\mode
+<all>
+
+%%%%% fonts options
+%%%%% using Google Noto typeface and Inconsolata for fixed-width
+\usepackage{fontspec}
+
+% main font (serif) for titles:
+\setromanfont{Alegreya Sans SC}
+
+% sans serif font for everything else
+\setsansfont{Alegreya Sans}
+
+% mono font for code:
+\setmonofont[
+  Contextuals = {Alternate},
+  Scale = 0.85
+]{Fira Code}
+\makeatletter
+\def\verbatim@nolig@list{}
+\makeatother
+
+\setbeamerfont{title}{family = \rmfamily, size = \LARGE}
+\setbeamerfont{subtitle}{family = \rmfamily}
+\setbeamerfont{author}{family = \rmfamily, size = \small}
+\setbeamerfont{institute}{family = \rmfamily, size = \tiny}
+\setbeamerfont{date}{family = \rmfamily, size = \small}
+\setbeamerfont{frametitle}{family = \rmfamily, size = \Large}
+\setbeamerfont{footnote}{size = \tiny}
+\setbeamerfont{footnote mark}{size = \tiny}
+\setbeamerfont{author in head/foot}{family = \ttfamily}
+\setbeamerfont{projected text}{size = \normalsize}
+
+% math font
+\usefonttheme{professionalfonts}
+
+% logo on title page
+\addtobeamertemplate{title page}{}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor = north west, yshift = -1ex, xshift = 1ex] at (current page.north west) {\includegraphics[width = 40mm]{uol_white.pdf}};
+  \end{tikzpicture}
+}
+
+\makeatother
+
+% disable navigation
+\setbeamertemplate{navigation symbols}{}
+
+% customize footline
+\setbeamertemplate{footline}
+{
+  \hbox{%
+  \begin{beamercolorbox}[wd = 0.30\paperwidth, ht = .05\paperheight, dp = 1ex, left]{author in head/foot}%
+    \vbox to .05\paperheight{\vfil\usebeamerfont{author in head/foot}\hspace*{2em}\insertshortauthor\vfil}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd = 0.40\paperwidth, ht = .05\paperheight, dp = 1ex, center]{author in head/foot}%
+    \vbox to .05\paperheight{\vfil\usebeamerfont{date in head/foot}\insertframenumber{} of \inserttotalframenumber\vfil}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd = 0.30\paperwidth, ht = .05\paperheight, dp = 1ex, right]{author in head/foot}%
+    \includegraphics[height = .05\paperheight]{uol_white.pdf}\hspace*{2em}
+  \end{beamercolorbox}}%
+}
+
+% remove line before footnote:
+\renewcommand*\footnoterule{}
+
+% set beamer covered text:
+\setbeamercovered{transparent}
+
+% itemize second level points style
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[square]
