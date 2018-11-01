@@ -234,3 +234,11 @@
 % itemize second level points style
 \setbeamertemplate{itemize subitem}[circle]
 \setbeamertemplate{itemize subsubitem}[square]
+
+% section and subsection titles
+\AtBeginSection[]{
+      \begin{frame}
+          \frametitle{Outline}
+          \tableofcontents[currentsection]
+      \end{frame}
+}
