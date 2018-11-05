@@ -170,10 +170,10 @@
 \usepackage{fontspec}
 
 % main font (serif) for titles:
-\setromanfont{Alegreya Sans SC}
+\setromanfont{Playfair Display SC}
 
 % sans serif font for everything else
-\setsansfont{Alegreya Sans}
+\setsansfont{Hind}
 
 % mono font for code:
 \setmonofont[
@@ -196,7 +196,7 @@
 \setbeamerfont{projected text}{size = \normalsize}
 
 % math font
-\usefonttheme{professionalfonts}
+% \usefonttheme{professionalfonts}
 
 % logo on title page
 \addtobeamertemplate{title page}{}{%
@@ -234,3 +234,11 @@
 % itemize second level points style
 \setbeamertemplate{itemize subitem}[circle]
 \setbeamertemplate{itemize subsubitem}[square]
+
+% section and subsection titles
+\AtBeginSection[]{
+      \begin{frame}
+          \frametitle{Outline}
+          \tableofcontents[currentsection]
+      \end{frame}
+}
