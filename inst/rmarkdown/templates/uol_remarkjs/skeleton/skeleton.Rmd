@@ -124,8 +124,8 @@ Also, this is .red[red] and this is .large[large].
 # R code
 
 ```{r}
-x = rnorm(10)
-y = rnorm(10)
+x <- rnorm(10)
+y <- rnorm(10)
 ```
 
 ---
@@ -150,8 +150,8 @@ plot(x, y)
 
 ```{r cars, out.height = '15%', fig.height = 4, fig.width = 6, dev = 'svg'}
 par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-fit = lm(dist ~ 1 + speed, data = cars)
+plot(cars, pch = 19, col = "darkgray", las = 1)
+fit <- lm(dist ~ 1 + speed, data = cars)
 abline(fit, lwd = 2)
 ```
 
@@ -159,7 +159,7 @@ abline(fit, lwd = 2)
 class: .image-slide, center, middle
 
 ```{r, echo = F}
-plot(cars, pch = 19, col = 'darkgray', las = 1)
+plot(cars, pch = 19, col = "darkgray", las = 1)
 abline(fit, lwd = 2)
 ```
 

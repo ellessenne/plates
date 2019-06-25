@@ -1,4 +1,4 @@
-#' A minimal, dark beamer template following University of Leicester visual identity guidelines
+#' Minimal-looking light template for a beamer presentation following the University of Leicester visual identity guidelines, with an emphasis on typography
 #'
 #' @description A beamer template following University of Leicester visual identity guidelines
 #' @inheritParams rmarkdown::beamer_presentation
@@ -10,14 +10,14 @@
 #'
 #' \dontrun{
 #' library(rmarkdown)
-#' draft("my_presentation.Rmd", template = "uol_beamer_dark", package = "uolvid")
+#' draft("my_presentation.Rmd", template = "miniuol", package = "uolvid")
 #' }
 #'
 #' @export
-uol_beamer_dark <- function(...) {
+miniuol <- function(...) {
   rmarkdown::beamer_presentation(
     ...,
-    template = find_resource("uol_beamer_dark", "template.tex"),
+    template = find_resource("miniuol", "template.tex"),
     keep_tex = TRUE,
     highlight = NULL,
     latex_engine = "xelatex"

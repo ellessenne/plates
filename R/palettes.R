@@ -51,7 +51,7 @@ get_uol_palette_mono <- function(colour = c("blue", "grey", "brown", "pink", "ye
 #' get_uol_palette(n = 5)
 #' get_uol_palette(n = 5, intensity = "medium")
 #' get_uol_palette(n = 5, method = "brightness")
-#' 
+#'
 #' library(ggplot2)
 #' pl <- get_uol_palette(n = 10)
 #' ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +

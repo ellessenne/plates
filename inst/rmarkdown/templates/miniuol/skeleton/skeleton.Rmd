@@ -1,25 +1,20 @@
 ---
-title: A minimal presentation template following UoL visual identity guidelines
-short_title: Short title
+title: A minimal presentation template,
+subtitle: with emphasis on typography
 author:
   - name: Alessandro Gasparini
     inst: "1,2"
   - name: Another Author
     inst: 2
-  - name: And-Another One
-    inst: 1
-short_author: ag475@leicester.ac.uk
+sauthor: ag475@leicester.ac.uk
 institute:
   - inst: 1
     institute: Department of Health Sciences, University of Leicester, Leicester, United Kingdom
   - inst: 2
     institute: Department of Something, University of Somewhere, Somewhere, Nice Country
 date: "`r Sys.Date()`"
-output: uolvid::uol_beamer_colour
+output: uolvid::miniuol
 aspectratio: 32
-t: true
-primary: blue
-accent: orange
 ---
 
 ```{r setup, include = FALSE}
@@ -38,7 +33,9 @@ When you click the **Knit** button a document will be generated that includes bo
 # Slide with Bullets
 
 - Bullet 1
+
 - Bullet 2
+
 - Bullet 3
 
 # Slide with R Output

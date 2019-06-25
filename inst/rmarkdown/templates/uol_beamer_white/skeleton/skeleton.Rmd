@@ -58,6 +58,6 @@ plot(pressure)
 How to generate random values from a normal distribution:
 
 ```{r, echo = TRUE}
-x = rnorm(10)
+x <- rnorm(10)
 x
 ```

@@ -7,12 +7,12 @@
 #' @return R Markdown output format to pass to [rmarkdown::render()]
 #'
 #' @examples
-#' 
+#'
 #' \dontrun{
 #' library(rmarkdown)
 #' draft("my_presentation.Rmd", template = "uol_beamer_white", package = "uolvid")
 #' }
-#' 
+#'
 #' @export
 uol_beamer_white <- function(...) {
   rmarkdown::beamer_presentation(
