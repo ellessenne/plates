@@ -18,7 +18,6 @@ null <- function(...) {
   rmarkdown::beamer_presentation(
     ...,
     template = find_resource("null", "template.tex"),
-    keep_tex = TRUE,
     highlight = NULL,
     latex_engine = "pdflatex"
   )
