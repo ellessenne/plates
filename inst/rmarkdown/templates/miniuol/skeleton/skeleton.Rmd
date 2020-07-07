@@ -13,7 +13,7 @@ institute:
   - inst: 2
     institute: Department of Something, University of Somewhere, Somewhere, Nice Country
 date: "`r Sys.Date()`"
-output: uolvid::miniuol
+output: templates::miniuol
 aspectratio: 32
 ---
 
@@ -21,7 +21,7 @@ aspectratio: 32
 library(knitr)
 options(width = 60)
 knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
-uolvid::wrap_linewidth()
+templates::wrap_linewidth()
 ```
 
 # R Markdown

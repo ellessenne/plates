@@ -4,7 +4,9 @@
 \name{uol_colours}
 \alias{uol_colours}
 \title{Complete list of palettes}
-\format{An object of class \code{list} of length 11.}
+\format{
+An object of class \code{list} of length 11.
+}
 \usage{
 uol_colours
 }

@@ -15,7 +15,7 @@ institute:
   - inst: 2
     institute: Department of Something, University of Somewhere, Somewhere, Nice Country
 date: "`r Sys.Date()`"
-output: uolvid::uol_beamer_white
+output: templates::uol_beamer_white
 aspectratio: 32
 t: true
 primary: blue
@@ -26,7 +26,7 @@ accent: orange
 library(knitr)
 options(width = 60)
 knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
-uolvid::wrap_linewidth()
+templates::wrap_linewidth()
 ```
 
 # R Markdown

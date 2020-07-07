@@ -4,9 +4,11 @@
 \alias{get_uol_palette_mono}
 \title{Monochromatic colour palette}
 \usage{
-get_uol_palette_mono(colour = c("blue", "grey", "brown", "pink",
-  "yellow", "green", "red", "purple", "lightblue", "orange",
-  "brightgreen"), n = 3)
+get_uol_palette_mono(
+  colour = c("blue", "grey", "brown", "pink", "yellow", "green", "red", "purple",
+    "lightblue", "orange", "brightgreen"),
+  n = 3
+)
 }
 \arguments{
 \item{colour}{A vector of colour names. See \code{\link{uol_colours}} for a list of possible colours.}
@@ -28,7 +30,8 @@ get_uol_palette_mono(colour = "blue")
 get_uol_palette_mono(colour = "red", n = 2)
 }
 \seealso{
-Other get palettes: \code{\link{get_uol_palette_manual}},
-  \code{\link{get_uol_palette}}
+Other get palettes: 
+\code{\link{get_uol_palette_manual}()},
+\code{\link{get_uol_palette}()}
 }
 \concept{get palettes}

@@ -1,25 +1,16 @@
-# uolvid
+# templates
 
-`uolvid` is an R package with tools following the University of Leicester [visual identity guidelines](http://www2.le.ac.uk/offices/cap/marcomms/creative/identity).
+`templates` is an R package with R Markdown templates following visual identity guidelines e.g. from the University of Leicester or Karolinska Institutet.
+All templates can be used by following `New file` > `R Markdown...` > `From Template` in RStudio.
 
-Included tools are:
-
-- a `beamer` template, with a coloured title slide and customisable colours;
-- a `beamer` template, with a white title slide and customisable colours;
-- a `remark.js` template, based on the [`xaringan`](https://github.com/yihui/xaringan
-) package;
-- colour palette generators;
-- ...
+Included templates are for beamer slides; if you want HTML slides, you can find some relevant themes for `remark.js` presentations in the [`xaringan`](https://github.com/yihui/xaringan) package.
 
 # Installation
 
-`uolvid` is only on GitHub at the moment, and may never make it to CRAN. Install the package from Github using `devtools`:
+`templates` is only on GitHub at the moment, and may never make it to CRAN. 
+Install the package from Github using `remotes`:
 
 ```r
-library(devtools)
-devtools::install_github("ellessenne/uolvid")
+library(remotes)
+remotes::install_github("ellessenne/templates")
 ```
-
-# Templates
-
-All templates can be used by following `New file` > `R Markdown...` > `From Template` in RStudio.

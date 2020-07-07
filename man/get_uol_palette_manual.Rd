@@ -22,7 +22,8 @@ get_uol_palette_manual(c("red", "blue", "yellow"))
 get_uol_palette_manual(c("red", "blue", "yellow"), intensity = "medium")
 }
 \seealso{
-Other get palettes: \code{\link{get_uol_palette_mono}},
-  \code{\link{get_uol_palette}}
+Other get palettes: 
+\code{\link{get_uol_palette_mono}()},
+\code{\link{get_uol_palette}()}
 }
 \concept{get palettes}

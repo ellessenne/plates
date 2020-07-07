@@ -19,7 +19,7 @@ A beamer template following University of Leicester visual identity guidelines
 
 \dontrun{
 library(rmarkdown)
-draft("my_presentation.Rmd", template = "miniuol", package = "uolvid")
+draft("my_presentation.Rmd", template = "miniuol", package = "templates")
 }
 
 }

@@ -4,8 +4,11 @@
 \alias{get_uol_palette}
 \title{Colours palette generator}
 \usage{
-get_uol_palette(n = 3, intensity = c("full", "medium", "light"),
-  method = c("hue", "saturation", "brightness"))
+get_uol_palette(
+  n = 3,
+  intensity = c("full", "medium", "light"),
+  method = c("hue", "saturation", "brightness")
+)
 }
 \arguments{
 \item{n}{Number of colours for the desired palette. Defaults to 3.}
@@ -36,7 +39,8 @@ ggplot(mpg, aes(cty, hwy, color = factor(cyl))) +
   scale_color_manual(values = pl)
 }
 \seealso{
-Other get palettes: \code{\link{get_uol_palette_manual}},
-  \code{\link{get_uol_palette_mono}}
+Other get palettes: 
+\code{\link{get_uol_palette_manual}()},
+\code{\link{get_uol_palette_mono}()}
 }
 \concept{get palettes}

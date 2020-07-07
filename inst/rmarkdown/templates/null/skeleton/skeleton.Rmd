@@ -7,7 +7,7 @@ institute:
   - inst: 1
     institute: Department of Health Sciences, University of Leicester, Leicester, United Kingdom
 date: "`r Sys.Date()`"
-output: uolvid::null
+output: templates::null
 aspectratio: 32
 ---
 
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   tidy = "styler",
   linewidth = getOption("width")
 )
-uolvid::wrap_linewidth()
+templates::wrap_linewidth()
 ```
 
 # R Markdown

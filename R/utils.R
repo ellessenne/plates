@@ -8,7 +8,7 @@
 #' \dontrun{
 #' options(width = 60)
 #' knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
-#' uolvid:::wrap_linewidth()
+#' templates:::wrap_linewidth()
 #' }
 #'
 wrap_linewidth <- function() {
@@ -31,7 +31,7 @@ wrap_linewidth <- function() {
 
 # Copied and adapted from rticles package:
 find_file <- function(template, file) {
-  template <- system.file("rmarkdown", "templates", template, file, package = "uolvid")
+  template <- system.file("rmarkdown", "templates", template, file, package = "templates")
   if (template == "") {
     stop("Couldn't find template file ", template, "/", file, call. = FALSE)
   }
@@ -51,27 +51,4 @@ split_lines <- function(x) {
   con <- textConnection(x)
   on.exit(close(con))
   readLines(con)
-}
-#' Copy default remark.js stylesheet to a given directory
-#'
-#' With `get_remarkjs_css()` you can copy the default stylesheet used for the UoL remark.js template to a given directory. This is useful if you want to tune the stylesheet yourself or implement new classes.
-#' @param to where to copy the default stylesheet
-#'
-#' @return This function returns a logical value indicating whether the operation succeeded or not. Using a missing value for a file or path name will always be regarded as a failure: see [base::file.copy] for more details.
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' # Copy the default stylesheet to the current working directory
-#' get_remarkjs_css()
-#'
-#' # Copy the default stylesheet to the "temp" directory
-#' get_remarkjs_css(to = "temp")
-#' }
-#'
-get_remarkjs_css <- function(to = getwd()) {
-  file.copy(
-    from = find_resource("uol_remarkjs", "uol_remarkjs.css"),
-    to = to
-  )
 }

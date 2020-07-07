@@ -10,7 +10,7 @@
 #'
 #' \dontrun{
 #' library(rmarkdown)
-#' draft("my_presentation.Rmd", template = "uol_beamer_dark", package = "uolvid")
+#' draft("my_presentation.Rmd", template = "uol_beamer_dark", package = "templates")
 #' }
 #'
 #' @export
