@@ -10,7 +10,7 @@
 #'
 #' \dontrun{
 #' library(rmarkdown)
-#' draft("my_presentation.Rmd", template = "miniki", package = "templates")
+#' draft("my_presentation.Rmd", template = "miniki", package = "plates")
 #' }
 #'
 #' @export

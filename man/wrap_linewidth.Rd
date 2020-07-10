@@ -13,7 +13,7 @@ wrap_linewidth()
 \dontrun{
 options(width = 60)
 knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
-templates:::wrap_linewidth()
+plates:::wrap_linewidth()
 }
 
 }

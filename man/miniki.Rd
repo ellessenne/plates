@@ -19,7 +19,7 @@ A beamer template following Karolinska Institutet's visual identity guidelines
 
 \dontrun{
 library(rmarkdown)
-draft("my_presentation.Rmd", template = "miniki", package = "templates")
+draft("my_presentation.Rmd", template = "miniki", package = "plates")
 }
 
 }

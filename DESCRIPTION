@@ -1,4 +1,4 @@
-Package: templates
+Package: plates
 Title: Templates for Talks and Presentations
 Version: 0.0.1-9000
 Authors@R: c(
@@ -10,8 +10,8 @@ Authors@R: c(
   )
 License: GPL (>= 3)
 Description: Visual identity tools and templates following design guidelines.
-URL: https://github/com/ellessenne/templates
-BugReports: https://github/com/ellessenne/templates/issues
+URL: https://github/com/ellessenne/plates
+BugReports: https://github/com/ellessenne/plates/issues
 Imports:
   ggplot2, 
   knitr,

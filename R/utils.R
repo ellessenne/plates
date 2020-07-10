@@ -8,7 +8,7 @@
 #' \dontrun{
 #' options(width = 60)
 #' knitr::opts_chunk$set(echo = FALSE, fig.align = "center", linewidth = getOption("width"))
-#' templates:::wrap_linewidth()
+#' plates:::wrap_linewidth()
 #' }
 #'
 wrap_linewidth <- function() {
@@ -31,7 +31,7 @@ wrap_linewidth <- function() {
 
 # Copied and adapted from rticles package:
 find_file <- function(template, file) {
-  template <- system.file("rmarkdown", "templates", template, file, package = "templates")
+  template <- system.file("rmarkdown", "templates", template, file, package = "plates")
   if (template == "") {
     stop("Couldn't find template file ", template, "/", file, call. = FALSE)
   }

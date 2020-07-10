@@ -19,7 +19,7 @@ A streamlined beamer template absed on the default theme
 
 \dontrun{
 library(rmarkdown)
-draft("my_presentation.Rmd", template = "null", package = "templates")
+draft("my_presentation.Rmd", template = "null", package = "plates")
 }
 
 }

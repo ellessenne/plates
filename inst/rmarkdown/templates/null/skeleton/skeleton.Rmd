@@ -7,7 +7,7 @@ institute:
   - inst: 1
     institute: Department of Health Sciences, University of Leicester, Leicester, United Kingdom
 date: "`r Sys.Date()`"
-output: templates::null
+output: plates::null
 aspectratio: 32
 ---
 
@@ -15,7 +15,7 @@ aspectratio: 32
 library(knitr)
 options(width = 60)
 knitr::opts_chunk$set(
-  echo = FALSE, 
+  echo = FALSE,
   fig.width = 5,
   fig.asp = 0.75,
   fig.align = "center",
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   tidy = "styler",
   linewidth = getOption("width")
 )
-templates::wrap_linewidth()
+plates::wrap_linewidth()
 ```
 
 # R Markdown
